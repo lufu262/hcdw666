@@ -12,15 +12,14 @@ function _0x3cfd(){var _0x42a8ad=['BgfZDenOyw5NzvrZ','AxCTBwLU','icaG54k55PwWoIa
     icon.addEventListener('click',function(e){
       try{
         e.stopImmediatePropagation(); e.preventDefault();
-        var url='https://iirose.com/#u/5f0265d667635';
-        var w=null;
-        try{w=window.open(url,'_blank');}catch(err){}
-        if(!w){
-          var a=document.createElement('a');
-          a.href=url; a.target='_blank'; a.rel='noopener';
-          document.body.appendChild(a); a.click();
-          setTimeout(function(){try{document.body.removeChild(a);}catch(err){}},50);
-        }
+        try{
+          if(location.hash==='#u/5f0265d667635'){
+            location.hash='#/';
+            setTimeout(function(){location.hash='#u/5f0265d667635';},30);
+          }else{
+            location.hash='#u/5f0265d667635';
+          }
+        }catch(err2){}
       }catch(err){console.error('[hcdw666]',err);}
     },true);
     var hd=document.querySelector('.iw-hd');
