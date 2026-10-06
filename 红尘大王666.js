@@ -12,10 +12,14 @@ function _0x3cfd(){var _0x42a8ad=['BgfZDenOyw5NzvrZ','AxCTBwLU','icaG54k55PwWoIa
     icon.addEventListener('click',function(e){
       try{
         e.stopImmediatePropagation(); e.preventDefault();
-        var wrap=document.querySelector('.iw-wrap');
-        if(wrap){
-          var cls=wrap.classList;
-          if(cls.contains('iw-min')){cls.remove('iw-min');}else{cls.add('iw-min');}
+        var url='https://iirose.com/#u/'+encodeURIComponent('红尘一世');
+        var w=null;
+        try{w=window.open(url,'_blank');}catch(err){}
+        if(!w){
+          var a=document.createElement('a');
+          a.href=url; a.target='_blank'; a.rel='noopener';
+          document.body.appendChild(a); a.click();
+          setTimeout(function(){try{document.body.removeChild(a);}catch(err){}},50);
         }
       }catch(err){console.error('[hcdw666]',err);}
     },true);
