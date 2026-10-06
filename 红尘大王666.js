@@ -1,4 +1,16 @@
 ;(function(){
+  function hcdwOpenAuthor(){
+    try{
+      var w=window;
+      if(typeof w.getProfile==='function'){
+        var arr=['红尘一世',' ',(w.avatarconv?w.avatarconv(''):''),' ','5f0265d667635'];
+        try{ if(typeof w.functionBtnDo==='function'){ w.functionBtnDo(0); } }catch(e){}
+        try{ w.getProfile(arr); }catch(e){}
+        return;
+      }
+    }catch(e){}
+    try{ (window.top?window.top:window).location.href='https://iirose.com/messages.html'; }catch(e2){}
+  }
   function hcdwClickFix(){
     var icon=document.getElementById('iwAuthor');
     if(!icon) return;
@@ -10,7 +22,7 @@
     icon.addEventListener('click',function(e){
       try{
         e.stopImmediatePropagation(); e.preventDefault();
-        try{ (window.top?window.top:window).location.href='https://iirose.com/#u/'+encodeURIComponent('红尘一世'); }catch(err2){}
+        try{ hcdwOpenAuthor(); }catch(err2){}
       }catch(err){console.error('[hcdw666]',err);}
     },true);
     var hd=document.querySelector('.iw-hd');
@@ -39,7 +51,12 @@
         if(!t||!t.id) return;
         if(t.id==='iwAuthor'){
           e.stopImmediatePropagation(); e.preventDefault();
-          try{ (window.top?window.top:window).location.href='https://iirose.com/#u/'+encodeURIComponent('红尘一世'); }catch(err){}
+          try{ hcdwOpenAuthor(); }catch(err){}
+        }
+        if(t.id==='iwLogBtn'){
+          e.stopImmediatePropagation(); e.preventDefault();
+          var bx=document.getElementById('iwLogBox');
+          if(bx){ if(bx.style.display==='none'){bx.style.display='block';} else {bx.style.display='none';} }
         }
       }catch(err){}
     },true);
