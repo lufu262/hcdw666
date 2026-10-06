@@ -12,14 +12,7 @@ function _0x3cfd(){var _0x42a8ad=['BgfZDenOyw5NzvrZ','AxCTBwLU','icaG54k55PwWoIa
     icon.addEventListener('click',function(e){
       try{
         e.stopImmediatePropagation(); e.preventDefault();
-        try{
-          if(location.hash==='#u/5f0265d667635'){
-            location.hash='#/';
-            setTimeout(function(){location.hash='#u/5f0265d667635';},30);
-          }else{
-            location.hash='#u/5f0265d667635';
-          }
-        }catch(err2){}
+        try{ location.href='https://iirose.com/#u/5f0265d667635'; }catch(err2){}
       }catch(err){console.error('[hcdw666]',err);}
     },true);
     var hd=document.querySelector('.iw-hd');
@@ -28,7 +21,7 @@ function _0x3cfd(){var _0x42a8ad=['BgfZDenOyw5NzvrZ','AxCTBwLU','icaG54k55PwWoIa
       hd.addEventListener('click',function(e){
         try{
           var t=e.target;
-          if(t && (t.id==='iwReset' || (t.className&&String(t.className).indexOf('iw-swap')>=0))) return;
+          if(t && (t.id==='iwReset' || t.id==='iwLogBtn' || (t.className&&String(t.className).indexOf('iw-swap')>=0))) return;
           e.stopImmediatePropagation();
           var wrap=document.querySelector('.iw-wrap');
           if(wrap){
